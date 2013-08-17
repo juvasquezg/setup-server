@@ -23,6 +23,7 @@ sudo apt-get install -y rlwrap
 
 # Install emacs24
 # https://launchpad.net/~cassou/+archive/emacs
+sudo apt-get install python-software-properties
 sudo add-apt-repository -y ppa:cassou/emacs
 sudo apt-get -qq update
 sudo apt-get install -y emacs24-nox emacs24-el emacs24-common-non-dfsg
@@ -39,10 +40,11 @@ fi
 if [ -d .emacs.d/ ]; then
     mv .emacs.d .emacs.d~
 fi
+cd $HOME/clones
 git clone https://github.com/startup-class/dotfiles.git
-ln -sb dotfiles/.screenrc .
-ln -sb dotfiles/.bash_profile .
-ln -sb dotfiles/.bashrc .
-ln -sb dotfiles/.bashrc_custom .
-ln -sf dotfiles/.emacs.d .
-
+ln -sb clones/dotfiles/.screenrc $HOME
+ln -sb clones/dotfiles/.bash_profile $HOME
+ln -sb clones/dotfiles/.bashrc $HOME
+ln -sb clones/dotfiles/.bashrc_custom $HOME
+ln -sf clones/dotfiles/.emacs.d $HOME
+ln -sf clones/dotfiles/.bash_aliases $HOME
