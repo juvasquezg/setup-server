@@ -41,7 +41,7 @@ if [ -d .emacs.d/ ]; then
     mv .emacs.d .emacs.d~
 fi
 cd $HOME/clones
-git clone https://github.com/startup-class/dotfiles.git
+git clone https://github.com/juvasquezg/dotfiles.git
 ln -sb clones/dotfiles/.screenrc $HOME
 ln -sb clones/dotfiles/.bash_profile $HOME
 ln -sb clones/dotfiles/.bashrc $HOME
