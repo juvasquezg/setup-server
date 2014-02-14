@@ -21,16 +21,20 @@ npm install -g jshint
 # See: http://nodejs.org/api/repl.html#repl_repl
 sudo apt-get install -y rlwrap
 
-# Install emacs24
+# Install emacs24 and vim
 # https://launchpad.net/~cassou/+archive/emacs
 sudo apt-get install python-software-properties
 sudo add-apt-repository -y ppa:cassou/emacs
 sudo apt-get -qq update
 sudo apt-get install -y emacs24-nox emacs24-el emacs24-common-non-dfsg
+sudo apt-get install vim-nox
 
 # Install Heroku toolbelt
 # https://toolbelt.heroku.com/debian
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+
+# Install openssh-server
+sudo apt-get install openssh-server
 
 # git pull and install dotfiles as well
 cd $HOME
