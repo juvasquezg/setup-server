@@ -36,6 +36,9 @@ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 # Install openssh-server
 sudo apt-get install openssh-server
 
+# Install build-essential
+sudo apt-get install build-essential
+
 # git pull and install dotfiles as well
 cd $HOME
 if [ -d ./dotfiles/ ]; then
