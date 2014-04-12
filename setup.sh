@@ -50,11 +50,11 @@ if [ -d .emacs.d/ ]; then
 fi
 cd $HOME/clones
 git clone https://github.com/juvasquezg/dotfiles.git
-mkdir dotfiles/.emacs.d/plugins
-git clone --recursive https://github.com/capitaomorte/yasnippet
 ln -sb clones/dotfiles/.screenrc $HOME
 ln -sb clones/dotfiles/.bash_profile $HOME
 ln -sb clones/dotfiles/.bashrc $HOME
 ln -sb clones/dotfiles/.bashrc_custom $HOME
 ln -sf clones/dotfiles/.emacs.d $HOME
 ln -sf clones/dotfiles/.bash_aliases $HOME
+
+git clone --recursive https://github.com/capitaomorte/yasnippet $HOME/clones/dotfiles/.emacs.d/plugins/yasnippet
